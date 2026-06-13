@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aashirwad Printing Services</title>
+    <title>Aashirwad Card Calendar & Printing Services</title>
     <style>
         html { scroll-behavior: smooth; }
-
+        
         /* Premium Dark/Gradient Theme Background */
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -17,7 +17,7 @@
             text-align: center;
             min-height: 100vh;
         }
-
+        
         /* Modern Interface Navigation Bar */
         nav { 
             background-color: rgba(18, 12, 7, 0.95); 
@@ -29,7 +29,7 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
+        
         .nav-container { 
             display: flex; 
             justify-content: space-between; 
@@ -39,14 +39,14 @@
             padding: 12px 20px; 
             box-sizing: border-box;
         }
-
-        /* Logo Styling */
+        
+        /* Logo Styling based on your layout */
         .logo-container {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-
+        
         .logo-icon {
             width: 36px;
             height: 36px;
@@ -60,20 +60,20 @@
             font-weight: bold;
             box-shadow: 0px 0px 10px rgba(255,154,158,0.5);
         }
-
+        
         .logo-text {
             color: #ffffff;
             font-size: 22px;
             font-weight: 700;
             letter-spacing: 0.5px;
         }
-
+        
         /* Menu Links */
         .menu-links {
             display: flex;
             gap: 25px;
         }
-
+        
         .nav-link { 
             text-decoration: none; 
             color: #cccccc; 
@@ -81,15 +81,15 @@
             font-size: 16px; 
             transition: 0.3s; 
         }
-
+        
         .nav-link:hover { 
             color: #ffffff; 
             text-shadow: 0 0 5px rgba(255,255,255,0.5);
         }
-
+        
         /* Main Layout Cards */
         .container { padding: 120px 20px 60px 20px; display: inline-block; max-width: 650px; width: 100%; box-sizing: border-box; }
-
+        
         section { 
             background: rgba(30, 30, 30, 0.6); 
             padding: 35px 25px; 
@@ -100,11 +100,11 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(5px);
         }
-
+        
         h1.home-title { color: #ffffff; font-size: 32px; text-align: center; margin-top: 0; }
         h2 { color: #ffffff; margin-top: 0; font-size: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
         p { font-size: 16px; line-height: 1.6; color: #b3b3b3; }
-
+        
         /* Centered Shop Photo Styling */
         .shop-photo-wrapper {
             text-align: center;
@@ -119,17 +119,17 @@
             box-shadow: 0px 0px 20px rgba(255, 154, 158, 0.4);
             display: inline-block;
         }
-
+        
         /* Premium Gallery */
         .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
         .gallery-item { width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); object-fit: cover; height: 170px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
         .gallery-item:hover { transform: scale(1.04); border-color: rgba(255,255,255,0.2); }
-
+        
         /* Contact Box Details */
         .contact-info { background: rgba(255, 255, 255, 0.04); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 4px solid #1a73e8; }
         .contact-info p { margin: 8px 0; color: #d4d4d4; }
         .contact-info strong { color: #ffffff; }
-
+        
         /* Action Buttons */
         .btn-container { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
         .btn { display: block; text-align: center; padding: 14px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; transition: 0.2s; }
@@ -141,12 +141,15 @@
 </head>
 <body>
 
+    <!-- TOP PREMIUM NAVIGATION MENU -->
     <nav>
         <div class="nav-container">
+            <!-- Updated Logo Section with New Name -->
             <div class="logo-container">
                 <div class="logo-icon">✦</div>
-                <div class="logo-text">AashirwadDesigns</div>
+                <div class="logo-text">Aashirwad card calendar</div>
             </div>
+            <!-- Menu Items -->
             <div class="menu-links">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#work" class="nav-link">Work</a>
@@ -155,19 +158,23 @@
         </div>
     </nav>
 
+    <!-- MAIN CONTENT SECTIONS -->
     <div class="container">
         
+        <!-- 1. HOME SECTION -->
         <section id="home">
             <h1 class="home-title">Aashirwad Printing</h1>
             
+            <!-- Center Shop Photo -->
             <div class="shop-photo-wrapper">
-                <img src="shop.jpg" alt="Aashirwad Printing Shop" class="shop-photo">
+                <img src="shop.jpg" alt="Aashirwad Printing Shop" class="shop-photo" onerror="this.src='shop.png';">
             </div>
             
             <p style="text-align: center; font-weight: 500; color: #ffffff;">Welcome to our official website!</p>
             <p>Aapke sabhi printing kaamyon ke liye ekmatra sthan. Hum high-quality visiting cards, flex banners, wedding cards, bill books, aur custom t-shirt printing ka kaam sahi daam aur tez delivery ke sath karte hain.</p>
         </section>
 
+        <!-- 2. WORK SECTION -->
         <section id="work">
             <h2>Our Work / Hamara Kaam</h2>
             <p>Humne haal hi mein jo projects pure kiye hain, unki ek jhalak:</p>
@@ -177,6 +184,7 @@
             </div>
         </section>
 
+        <!-- 3. CONTACT SECTION -->
         <section id="contact">
             <h2>Contact Us / Sampark Karein</h2>
             <p>Order ke silsile mein aap humse neeche diye gaye address par mil sakte hain ya direct call/message kar sakte hain:</p>
