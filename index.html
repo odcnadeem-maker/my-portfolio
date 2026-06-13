@@ -6,74 +6,180 @@
     <title>Aashirwad Printing Services</title>
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f7f9fc; color: #333; margin: 0; padding: 0; text-align: center; }
-        
-        /* Navigation Menu Styles */
-        nav { background-color: #ffffff; position: fixed; top: 0; left: 0; width: 100%; box-shadow: 0px 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
-        .nav-container { display: flex; justify-content: center; gap: 30px; padding: 15px 0; }
-        .nav-link { text-decoration: none; color: #5f6368; font-weight: bold; font-size: 16px; transition: 0.3s; }
-        .nav-link:hover { color: #1a73e8; }
-        
-        /* Main Container */
-        .container { padding: 100px 20px 40px 20px; display: inline-block; max-width: 600px; width: 100%; box-sizing: border-box; }
-        
-        /* Sections Common Styling */
-        section { background: white; padding: 35px 25px; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.06); margin-bottom: 30px; text-align: left; }
-        h2 { color: #1a73e8; margin-top: 0; font-size: 24px; border-bottom: 2px solid #f1f3f4; padding-bottom: 8px; }
-        p { font-size: 16px; line-height: 1.6; color: #5f6368; }
-        
-        /* Home Section Custom */
-        .home-title { color: #1a73e8; font-size: 30px; text-align: center; margin-top: 0; }
-        
-        /* Work/Gallery Section Custom */
+
+        /* Premium Dark/Gradient Theme Background */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(180deg, #1f140a 0%, #121212 100%);
+            color: #e0e0e0; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        /* Modern Interface Navigation Bar */
+        nav { 
+            background-color: rgba(18, 12, 7, 0.95); 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.4); 
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            max-width: 1000px; 
+            margin: 0 auto;
+            padding: 12px 20px; 
+            box-sizing: border-box;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #121212;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px rgba(255,154,158,0.5);
+        }
+
+        .logo-text {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Menu Links */
+        .menu-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-link { 
+            text-decoration: none; 
+            color: #cccccc; 
+            font-weight: 500; 
+            font-size: 16px; 
+            transition: 0.3s; 
+        }
+
+        .nav-link:hover { 
+            color: #ffffff; 
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+        }
+
+        /* Main Layout Cards */
+        .container { padding: 120px 20px 60px 20px; display: inline-block; max-width: 650px; width: 100%; box-sizing: border-box; }
+
+        section { 
+            background: rgba(30, 30, 30, 0.6); 
+            padding: 35px 25px; 
+            border-radius: 16px; 
+            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.3); 
+            margin-bottom: 35px; 
+            text-align: left; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+        }
+
+        h1.home-title { color: #ffffff; font-size: 32px; text-align: center; margin-top: 0; }
+        h2 { color: #ffffff; margin-top: 0; font-size: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        p { font-size: 16px; line-height: 1.6; color: #b3b3b3; }
+
+        /* Centered Shop Photo Styling */
+        .shop-photo-wrapper {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .shop-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ff9a9e;
+            box-shadow: 0px 0px 20px rgba(255, 154, 158, 0.4);
+            display: inline-block;
+        }
+
+        /* Premium Gallery */
         .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
-        .gallery-item { width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); object-fit: cover; height: 160px; transition: 0.3s; }
-        .gallery-item:hover { transform: scale(1.03); }
-        
-        /* Contact Section Custom */
-        .contact-info { background: #f1f3f4; padding: 15px; border-radius: 8px; margin: 20px 0; }
-        .contact-info strong { color: #202124; }
+        .gallery-item { width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); object-fit: cover; height: 170px; transition: 0.3s; border: 1px solid rgba(255,255,255,0.05); }
+        .gallery-item:hover { transform: scale(1.04); border-color: rgba(255,255,255,0.2); }
+
+        /* Contact Box Details */
+        .contact-info { background: rgba(255, 255, 255, 0.04); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 4px solid #1a73e8; }
+        .contact-info p { margin: 8px 0; color: #d4d4d4; }
+        .contact-info strong { color: #ffffff; }
+
+        /* Action Buttons */
         .btn-container { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
-        .btn { display: block; text-align: center; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; transition: 0.2s; }
-        .btn-whatsapp { background-color: #25D366; color: white; }
-        .btn-whatsapp:hover { background-color: #20ba5a; }
-        .btn-email { background-color: #1a73e8; color: white; }
-        .btn-email:hover { background-color: #155cb4; }
+        .btn { display: block; text-align: center; padding: 14px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; transition: 0.2s; }
+        .btn-whatsapp { background: linear-gradient(135deg, #25D366 0%, #1cbd51 100%); color: white; box-shadow: 0 4px 15px rgba(37,211,102,0.2); }
+        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.3); }
+        .btn-email { background: linear-gradient(135deg, #1a73e8 0%, #155cb4 100%); color: white; box-shadow: 0 4px 15px rgba(26,115,232,0.2); }
+        .btn-email:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,115,232,0.3); }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#work" class="nav-link">Work</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <div class="logo-container">
+                <div class="logo-icon">✦</div>
+                <div class="logo-text">AashirwadDesigns</div>
+            </div>
+            <div class="menu-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
         </div>
     </nav>
 
     <div class="container">
         
-        <!-- Home Section -->
         <section id="home">
             <h1 class="home-title">Aashirwad Printing</h1>
-            <p style="text-align: center;"><strong>Welcome to our official website!</strong></p>
-            <p>Aapke sabhi printing kaamyon ke liye ekmatra sthan. Hum high-quality visiting cards, flex banners, wedding cards, bill books, aur custom t-shirt printing ka kaam sahi daam aur tez delivery ke sath karte hain. Humara maqsad aapke business ko ek naya roop dena hai.</p>
+            
+            <div class="shop-photo-wrapper">
+                <img src="shop.jpg" alt="Aashirwad Printing Shop" class="shop-photo">
+            </div>
+            
+            <p style="text-align: center; font-weight: 500; color: #ffffff;">Welcome to our official website!</p>
+            <p>Aapke sabhi printing kaamyon ke liye ekmatra sthan. Hum high-quality visiting cards, flex banners, wedding cards, bill books, aur custom t-shirt printing ka kaam sahi daam aur tez delivery ke sath karte hain.</p>
         </section>
 
-        <!-- Work/Gallery Section -->
         <section id="work">
             <h2>Our Work / Hamara Kaam</h2>
-            <p>Humne haal hi mein jo projects pure kiye hain, unki kuch jhalak neeche dekh sakte hain:</p>
+            <p>Humne haal hi mein jo projects pure kiye hain, unki ek jhalak:</p>
             <div class="gallery">
                 <img src="photo1.jpg" alt="Printing Project 1" class="gallery-item">
                 <img src="photo2.jpg" alt="Printing Project 2" class="gallery-item">
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Us / Sampark Karein</h2>
-            <p>Koi bhi pooch-taach ya order ke silsile mein aap humse neeche diye gaye address par mil sakte hain ya direct call/message kar sakte hain:</p>
+            <p>Order ke silsile mein aap humse neeche diye gaye address par mil sakte hain ya direct call/message kar sakte hain:</p>
             
             <div class="contact-info">
                 <p><strong>Address:</strong><br>Near by Ruchi Confectionary, RR Qtr Gali, Kashipur Bypass Road, Rudrapur (UK)</p>
